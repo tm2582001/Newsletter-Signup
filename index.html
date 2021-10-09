@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    
+
+<body class="text-center">
+    <main class="form-signin">
+        <form action="/" method="post">
+            <img class="mb-3" src="/images/profile.svg" alt="logo" width="70" height="70">
+            <h1 class="h4 mb-2">Sign up to my Newsletter!</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control top" name="firstname" id="floatingFirstname" placeholder=" ">
+                <label for="floatingFirstname">First name</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control middle" name="lastname" id="floatingLastname" placeholder=" ">
+                <label for="floatingLastname">Last name</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" class="form-control bottom" name="email" id="floatingemail" placeholder="abc@gmail.com">
+                <label for="floatingemail">Email</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <p>Made By Tushar Mehta</p>
+
+        </form>
+    </main>
 </body>
+
 </html>
