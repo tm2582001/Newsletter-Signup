@@ -53,6 +53,14 @@ app.post("/", function (req, res) {
         response.on("data", function (data){
             // console.log(JSON.parse(data));       left code to see mailchimp response
 
+            var errorCount = JSON.parse(data).error_count;
+
+            if(response.statusCode === 200 && errorCount === 0 ){
+                res.redirect("success");
+            }else{
+                res.redirect("failure")
+            }
+
         });
     });
 
@@ -61,7 +69,13 @@ app.post("/", function (req, res) {
     request.end();
 });
 
+app.get("/success", function(req,res){
+    res.sendFile(__dirname + ("/success.html"));
+});
 
+app.get("/failure", function(req,res){
+    res.sendFile(__dirname + ("/failure.html"));
+});
 
 
 
