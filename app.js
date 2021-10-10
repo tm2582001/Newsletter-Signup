@@ -77,8 +77,11 @@ app.get("/failure", function(req,res){
     res.sendFile(__dirname + ("/failure.html"));
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8080;
+}
 
-
-app.listen(8080, function () {
-    console.log("server started at port 8080");
+app.listen(port, function () {
+    console.log("server started");
 });
