@@ -11,3 +11,4 @@ This project is build using HTML, CSS, Bootstrap for fontend and Node.js for bac
 
 
 ## How to get Api key and list_id-
+* first Signup on [mailchimp](https://mailchimp.com/)
